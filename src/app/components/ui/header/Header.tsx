@@ -5,15 +5,26 @@ import { BiUser } from "react-icons/bi";
 import { CgMenu } from "react-icons/cg";
 import useMedia from "@/hooks/useMedia";
 import { colors } from "@/utils/colors";
+import { useCallback, useState } from "react";
+import MenuMobile from "./MenuMobile";
 
 const Header = () => {
   const { mobile } = useMedia("(max-width:1025px)");
+  const [activeMenu, setActiveMenu] = useState(false);
+
+  const closeMenu = useCallback(() => {
+     setActiveMenu(false);
+  },[]);
 
   return (
     <S.Header>
       <S.Nav>
         {mobile && (
-          <S.ButtonMobile aria-label={"Abrir menu"} aria-expanded={false}>
+          <S.ButtonMobile
+            aria-label={"Abrir menu"}
+            aria-expanded={activeMenu}
+            onClick={() => setActiveMenu(!activeMenu)}
+          >
             <CgMenu fontSize={25} color={colors.fontColor} />
           </S.ButtonMobile>
         )}
@@ -39,6 +50,7 @@ const Header = () => {
           </button>
         </S.WrapperButttons>
       </S.Nav>
+      {mobile && activeMenu && <MenuMobile closeMenu={closeMenu}/>}
     </S.Header>
   );
 };

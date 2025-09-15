@@ -5,6 +5,7 @@ import Link from "next/link";
 export const Header = styled.header`
   padding: 0 1.25rem;
   border-bottom: 1px solid hsl(240, 3.7%, 15.9%);
+  position: relative;
 `;
 
 export const Nav = styled.nav`
@@ -117,5 +118,64 @@ export const ButtonMobile = styled.button`
 
   &:hover {
     background-color: ${colors.secundary} !important;
+  }
+`;
+
+export const MenuMobile = styled.div`
+  border-right: 1px solid hsl(240, 3.7%, 15.9%);
+  position: absolute;
+  max-width: 380px !important;
+  width: 100%;
+  top: 0;
+  left: 0 !important;
+  z-index: 11;
+  padding: 1.25rem;
+  background-color: hsl(240, 10%, 3.9%);
+  height: 100vh;
+  overflow: hidden;
+`;
+
+export const Box = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  span {
+    font-weight: 600;
+  }
+
+  button {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+  }
+`;
+
+export const WrapperButtonsMobile = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 14px;
+
+  button {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 0.63rem;
+    padding: 0.75rem;
+    border-radius: 8px;
+    cursor: pointer;
+    color: ${colors.fontColor};
+    background-color: transparent;
+    border: 1px solid hsl(240, 3.7%, 15.9%);
+    transition: 0.3s;
+
+    span {
+      font-weight: 500 !important;
+    }
+
+    &:hover {
+      background-color: ${colors.secundary} !important;
+    }
   }
 `;
