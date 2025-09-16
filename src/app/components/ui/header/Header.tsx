@@ -13,8 +13,8 @@ const Header = () => {
   const [activeMenu, setActiveMenu] = useState(false);
 
   const closeMenu = useCallback(() => {
-     setActiveMenu(false);
-  },[]);
+    setActiveMenu(false);
+  }, []);
 
   return (
     <S.Header>
@@ -50,7 +50,7 @@ const Header = () => {
           </button>
         </S.WrapperButttons>
       </S.Nav>
-      {mobile && activeMenu && <MenuMobile closeMenu={closeMenu}/>}
+      {mobile && activeMenu && <MenuMobile closeMenu={closeMenu} />}
     </S.Header>
   );
 };
