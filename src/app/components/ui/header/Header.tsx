@@ -7,10 +7,12 @@ import useMedia from "@/hooks/useMedia";
 import { colors } from "@/utils/colors";
 import { useCallback, useState } from "react";
 import MenuMobile from "./MenuMobile";
+import { useRouter } from "next/navigation";
 
 const Header = () => {
   const { mobile } = useMedia("(max-width:1025px)");
   const [activeMenu, setActiveMenu] = useState(false);
+  const router = useRouter();
 
   const closeMenu = useCallback(() => {
     setActiveMenu(false);
@@ -40,7 +42,7 @@ const Header = () => {
         )}
         <S.WrapperButttons>
           {!mobile && (
-            <button>
+            <button onClick={()=> router.push('')}>
               <BiUser fontSize={25} />
               Entrar
             </button>

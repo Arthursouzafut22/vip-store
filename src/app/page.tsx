@@ -1,16 +1,12 @@
-"use client";
-
 import * as S from "@/utils/page";
-import Carrosel from "./components/ui/carrosel/Carrosel";
-import useMedia from "@/hooks/useMedia";
+import Wrapper from "./components/ui/Wrapper/Wrapper";
+import ProductList from "./components/ProductList/ProductList";
 
-export default function Home() {
-  const { mobile } = useMedia("(max-width:767px)");
+export default async function Home() {
   return (
     <S.Home>
-      <div style={{ padding: mobile ? "30px 1.25rem" : "0 1.25rem" }}>
-        <Carrosel />
-      </div>
+      <Wrapper />
+      <ProductList category="mouses" title="MOUSES"/>
     </S.Home>
   );
 }

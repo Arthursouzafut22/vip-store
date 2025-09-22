@@ -1,4 +1,7 @@
-import styled from '@emotion/styled';
+"use client";
 
+import styled from "@emotion/styled";
 
-export const Home = styled.main``;
+export const Home = styled.main`
+
+`;
