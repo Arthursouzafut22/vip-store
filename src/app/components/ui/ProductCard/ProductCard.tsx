@@ -19,7 +19,7 @@ const ProductCard = ({ item }: { item: ProductsProps }) => {
       )}
       <S.WrapperImage>
         <Image
-          src={`/productss/${item?.fotos[0]}`}
+          src={`/products/${item?.fotos[0]}`}
           alt={item?.nome}
           width={100}
           height={100}

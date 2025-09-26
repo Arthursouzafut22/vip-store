@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import GlobalStyles from "./Globals";
 import Header from "./components/ui/Header/Header";
 import { Poppins } from "next/font/google";
+import { Footer } from "./components/ui/Footer/Footer";
 
 export const metadata: Metadata = {
   title: "VIP store",
@@ -28,6 +29,7 @@ export default function RootLayout({
         <Header />
         <GlobalStyles />
         {children}
+        <Footer />
       </body>
     </html>
   );

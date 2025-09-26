@@ -14,7 +14,7 @@ type CarroselProps = {
   categoryProduct: ProductsProps[];
 };
 
-export const CarroselProduct = ({ categoryProduct }: CarroselProps) => {
+const CarroselProduct = ({ categoryProduct }: CarroselProps) => {
   const { mobile } = useMedia("(max-width:1218px)");
 
   return (
@@ -47,3 +47,5 @@ export const CarroselProduct = ({ categoryProduct }: CarroselProps) => {
     </Swiper>
   );
 };
+
+export default CarroselProduct;

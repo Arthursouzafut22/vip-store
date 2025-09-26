@@ -50,6 +50,8 @@ export const WrapperImage = styled.div`
   img {
     display: block;
     transition: 0.3s;
+    max-width: 100% !important;
+    object-fit: contain;
 
     &:hover {
       transform: scale(1.1) !important;
