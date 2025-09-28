@@ -1,6 +1,6 @@
 "use client";
 
-import Carrosel from "../Carrosel/Carrosel";
+import Carrosel from "@/app/components/ui/Carrosel/Carrosel";
 import CategoryNav from "../CategoryNav/CategoryNav";
 import useMedia from "@/hooks/useMedia";
 
