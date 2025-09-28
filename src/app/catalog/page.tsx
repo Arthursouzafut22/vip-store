@@ -5,6 +5,7 @@ import * as S from "./styles";
 import Image from "next/image";
 import { LuShapes } from "react-icons/lu";
 import { useRouter } from "next/navigation";
+import { BoxTitle } from "../components/ui/BoxTitle/BoxTitle";
 
 const Catalog = () => {
   const router = useRouter();
@@ -12,10 +13,7 @@ const Catalog = () => {
   return (
     <S.Section>
       <S.WrapperCatalog>
-        <S.BoxTitle>
-          <LuShapes size={22} />
-          <h1>{"Catálogo".toUpperCase()}</h1>
-        </S.BoxTitle>
+        <BoxTitle Icon={LuShapes} size={22} title="Catálogo" />
 
         <S.WrapperCategory>
           {category &&

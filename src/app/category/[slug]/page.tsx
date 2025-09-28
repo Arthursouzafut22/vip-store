@@ -1,14 +1,34 @@
 import getProduct from "@/actions/getProducts/getProduct";
+import * as S from "./styles";
+import ProductCard from "@/app/components/ui/ProductCard/ProductCard";
+import { BoxTitle } from "@/app/components/ui/BoxTitle/BoxTitle";
+import { getIcon } from "@/functions/getIcon/getIcon";
 
-export default async function Category({ params }:{ params:{ slug: string } }) {
+type CategoryProps = {
+  params: { slug: string };
+};
 
+export default async function Category({ params }: CategoryProps) {
   const products = await getProduct();
-  const productsCategory = products.filter(c => c.categoria === params.slug);
-  console.log(productsCategory);
+  const productsCategory = products?.filter(
+    ({ categoria }) => categoria === params.slug
+  );
 
   return (
-    <section>
-      <h1 style={{color:'#fff'}}>{params.slug}</h1>
-    </section>
+    <S.Section>
+      <S.WrapperCategory>
+        <BoxTitle
+          Icon={getIcon(params.slug)!}
+          title={params.slug.toUpperCase()}
+          size={16}
+        />
+        <S.ContainerProducts>
+          {productsCategory &&
+            productsCategory.map((item) => (
+              <ProductCard key={item.id} item={item} />
+            ))}
+        </S.ContainerProducts>
+      </S.WrapperCategory>
+    </S.Section>
   );
 }

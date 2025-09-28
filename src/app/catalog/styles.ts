@@ -12,24 +12,6 @@ export const WrapperCatalog = styled.div`
   margin: 0 auto;
 `;
 
-export const BoxTitle = styled.div`
-  margin-block: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.38rem;
-  border: 2px solid ${colors.blueButton};
-  max-width: 150px;
-  padding: 0.6rem;
-  border-radius: 9999px;
-
-  h1 {
-    font-size: 1rem;
-    font-weight: 500;
-    line-height: 1.5rem;
-  }
-`;
-
 export const WrapperCategory = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);

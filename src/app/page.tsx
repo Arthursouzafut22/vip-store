@@ -13,7 +13,7 @@ export default async function Home() {
         <ProductList category="mouses" title="MOUSES" />
       </Suspense>
       <BannersDiscounts />
-      <ProductList category="teclado" title="TECLADOS" />
+      <ProductList category="teclados" title="TECLADOS" />
       <BannerFrete />
       <ProductList category="fones" title="FONES" />
     </S.Home>
