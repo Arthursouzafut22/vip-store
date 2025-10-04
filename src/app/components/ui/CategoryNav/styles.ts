@@ -17,7 +17,6 @@ export const NavCategory = styled.nav`
 
   button {
     display: flex;
-    /* font-size: 16px; */
     align-items: center;
     justify-content: center;
     gap: 8px;

@@ -14,7 +14,7 @@ export const WrapperCategory = styled.div`
 export const ContainerProducts = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 25px;
+  gap: 1.56rem;
 
   a {
     display: block !important;

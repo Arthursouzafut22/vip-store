@@ -78,7 +78,7 @@ export const ContainerPrice = styled.div`
 export const ContainerRatings = styled.div`
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 0.5rem;
   margin-top: 5px;
 
   span {

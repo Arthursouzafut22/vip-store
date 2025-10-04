@@ -10,7 +10,12 @@ import { IoMdArrowDown } from "react-icons/io";
 
 const ProductCard = ({ item }: { item: ProductsProps }) => {
   return (
-    <S.CardProduct href={`/product?id=${item?.id}&category=${item?.categoria}`}>
+    <S.CardProduct
+      href={{
+        pathname: "/products",
+        query: { id: item?.id, category: item?.categoria },
+      }}
+    >
       {item?.desconto !== 0 && (
         <b>
           {" "}

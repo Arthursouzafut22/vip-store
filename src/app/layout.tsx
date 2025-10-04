@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import GlobalStyles from "./Globals";
-import Header from "@/app/components/ui/Header/Header";
+
 import { Poppins } from "next/font/google";
 import { Footer } from "./components/ui/Footer/Footer";
+import Header from "@/app/components/ui/Header/Header";
 
 export const metadata: Metadata = {
   title: "VIP store",
@@ -28,7 +29,7 @@ export default function RootLayout({
       <body>
         <Header />
         <GlobalStyles />
-        {children}
+        <div style={{ flex: "1" }}>{children}</div>
         <Footer />
       </body>
     </html>
